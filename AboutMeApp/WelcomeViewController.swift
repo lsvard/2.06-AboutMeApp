@@ -42,7 +42,4 @@ final class WelcomeViewController: UIViewController {
         view.layer.insertSublayer(layer, at: 0)
     }
 }
-//    // MARK: - IBActions
-//    @IBAction func logOutButtonPressed() {
-//        dismiss(animated: true)
-//    }
+

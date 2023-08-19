@@ -11,12 +11,12 @@ final class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "User"
+    private let user = "User"
     private let password = "1"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.user = userName
+        welcomeVC.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,7 +27,7 @@ final class LogInViewController: UIViewController {
     // MARK: - IBActions/
     
     @IBAction func logInButtonPressed() {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user, passwordTF.text == password else {
             showAlert(
                 title: "Invalid User Name or password",
                 message: "Please, enter correct User Name or password"
@@ -37,9 +37,9 @@ final class LogInViewController: UIViewController {
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    @IBAction func forgotRegistrData(_ sender: UIButton) {
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops", message: "Your User name is \(userName)")
+        ? showAlert(title: "Oops", message: "Your User name is \(user)")
         : showAlert(title: "Oops", message: "Your password is \(password)")
     }
     
@@ -68,40 +68,3 @@ extension LogInViewController {
         present(alert, animated: true)
     }
 }
-
-//    @IBAction func forgotUserNamePressed() {
-//        showAlert(
-//            withTitle: "Oops",
-//            andMessage: "Your User name is \(userName)"
-//        )
-//    }
-//
-//    @IBAction func forgotPasswordPressed() {
-//        showAlert(
-//            withTitle: "Oops",
-//            andMessage: "Your password is \(password)"
-//        )
-//    }
-//        guard let inputText = passwordTF.text, inputText == password else {
-//            showAlert(
-//                withTitle: "Invalid login or password",
-//                andMessage: "Please, enter correct login or password"
-//            )
-//            return
-//        }
-//        guard let inputText = userNameTF.text, !inputText.isEmpty else {
-//            showAlert(
-//                withTitle: "User Name field is empty",
-//                andMessage: "Please, enter User Name"
-//            )
-//            return
-//        }
-//
-//        guard let inputText = passwordTF.text, !inputText.isEmpty else {
-//            showAlert(
-//                withTitle: "Password field is empty",
-//                andMessage: "Please, enter password"
-//            )
-//            return
-//        }
-        
