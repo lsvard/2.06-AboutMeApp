@@ -11,7 +11,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "User"
+    private let user = "1"
     private let password = "1"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
