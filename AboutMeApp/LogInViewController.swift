@@ -11,12 +11,11 @@ final class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "1"
-    private let password = "1"
+    private let user = User.getUser()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.user = user
+        welcomeVC.person = user.person
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,7 +26,7 @@ final class LogInViewController: UIViewController {
     // MARK: - IBActions/
     
     @IBAction func logInButtonPressed() {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Invalid User Name or password",
                 message: "Please, enter correct User Name or password"
@@ -39,8 +38,8 @@ final class LogInViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops", message: "Your User name is \(user)")
-        : showAlert(title: "Oops", message: "Your password is \(password)")
+        ? showAlert(title: "Oops", message: "Your User name is \(user.login)")
+        : showAlert(title: "Oops", message: "Your password is \(user.password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
