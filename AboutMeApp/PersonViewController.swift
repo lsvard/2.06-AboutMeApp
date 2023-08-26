@@ -39,7 +39,8 @@ final class PersonViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        personImage.layer.cornerRadius = personImage.frame.width / 2
+        personImage.layer.cornerRadius = 10
+        //personImage.layer.cornerRadius = personImage.frame.width / 2 
     }
     
     // MARK: Private methods
