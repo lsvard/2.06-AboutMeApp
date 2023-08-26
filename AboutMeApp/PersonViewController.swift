@@ -14,7 +14,7 @@ class PersonViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
-    @IBOutlet var ambitionLabel: UILabel!
+    @IBOutlet var hobbyLabel: UILabel!
     
     @IBOutlet var personImage: UIImageView!
     
@@ -44,7 +44,7 @@ class PersonViewController: UIViewController {
         nameLabel.text = person.name
         ageLabel.text = person.age
         cityLabel.text = person.city
-        ambitionLabel.text = person.hobby
+        hobbyLabel.text = person.hobby
         personImage.image = UIImage(named: person.photo)
     }
     

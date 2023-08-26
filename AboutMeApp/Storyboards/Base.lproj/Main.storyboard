@@ -171,20 +171,111 @@
         <!--Духовная личность-->
         <scene sceneID="QGd-c2-V3N">
             <objects>
-                <viewController id="9n2-Ka-1d5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8T4-bo-Me6">
+                <viewController id="9n2-Ka-1d5" customClass="SpiritualPersonViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8T4-bo-Me6" customClass="Sp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSu-gS-nxB">
-                                <rect key="frame" x="95" y="506" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Fj-1c-CkU">
+                                <rect key="frame" x="16" y="253" width="175.5" height="182.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hWl-cD-1KQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="182.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Духовное Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFC-xL-c6o">
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Лет в практике:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7P-G8-TFK">
+                                                <rect key="frame" x="0.0" y="40.5" width="124" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Юнит:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooz-NU-ZR2">
+                                                <rect key="frame" x="0.0" y="81" width="124" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Увлечение:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INq-WB-gZZ">
+                                                <rect key="frame" x="0.0" y="121.5" width="124" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ачарья:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lub-YC-BhG">
+                                                <rect key="frame" x="0.0" y="162" width="124" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lkS-ww-tsl">
+                                        <rect key="frame" x="134" y="0.0" width="41.5" height="182.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91Z-oq-ZQB">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-TE-sPB">
+                                                <rect key="frame" x="0.0" y="40.5" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFl-L5-EgB">
+                                                <rect key="frame" x="0.0" y="81" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-6R-WVw">
+                                                <rect key="frame" x="0.0" y="121.5" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="329-ua-Tkw">
+                                                <rect key="frame" x="0.0" y="162" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiritualImage" translatesAutoresizingMaskIntoConstraints="NO" id="buI-HY-PQ6">
+                                <rect key="frame" x="100" y="92.5" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="buI-HY-PQ6" secondAttribute="height" multiplier="1:1" id="JbD-52-0ds"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tZ1-Ct-aY2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Fj-1c-CkU" firstAttribute="leading" secondItem="tZ1-Ct-aY2" secondAttribute="leading" constant="16" id="DeI-9l-vmM"/>
+                            <constraint firstItem="7Fj-1c-CkU" firstAttribute="top" secondItem="buI-HY-PQ6" secondAttribute="bottom" constant="40.5" id="K5s-9W-6GU"/>
+                            <constraint firstItem="buI-HY-PQ6" firstAttribute="centerX" secondItem="8T4-bo-Me6" secondAttribute="centerX" id="UBw-ft-cMn"/>
+                            <constraint firstItem="7Fj-1c-CkU" firstAttribute="centerY" secondItem="8T4-bo-Me6" secondAttribute="centerY" constant="60" id="cDb-oR-jxj"/>
+                            <constraint firstItem="buI-HY-PQ6" firstAttribute="top" secondItem="tZ1-Ct-aY2" secondAttribute="top" id="qtm-GL-EDM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Духовная личность" id="h0Y-xw-pLE"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="vFl-L5-EgB" id="OBX-1A-H4m"/>
+                        <outlet property="hobbyLabel" destination="lv1-6R-WVw" id="1EG-4n-MQ7"/>
+                        <outlet property="spiritualAgeLabel" destination="rxF-TE-sPB" id="ASO-uH-hID"/>
+                        <outlet property="spiritualNameLabel" destination="91Z-oq-ZQB" id="yZn-d3-864"/>
+                        <outlet property="teacherLabel" destination="329-ua-Tkw" id="F7k-ra-GKO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Voe-5V-GFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,12 +296,12 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-rA-X6f">
-                                <rect key="frame" x="16" y="263" width="141.5" height="142"/>
+                                <rect key="frame" x="16" y="263" width="143.5" height="142"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Ua-9d-r0L">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="142"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmM-cA-qY0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmM-cA-qY0">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -237,28 +328,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EJW-3P-mHj">
-                                        <rect key="frame" x="100" y="0.0" width="41.5" height="142"/>
+                                        <rect key="frame" x="100" y="0.0" width="43.5" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdR-XG-yJB">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwj-PD-3fX">
-                                                <rect key="frame" x="0.0" y="40.5" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="40.5" width="43.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXL-b6-XKh">
-                                                <rect key="frame" x="0.0" y="81" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="81" width="43.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBC-hm-SAz">
-                                                <rect key="frame" x="0.0" y="121.5" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="121.5" width="43.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -289,8 +380,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageLabel" destination="dwj-PD-3fX" id="tyd-N9-YQK"/>
-                        <outlet property="ambitionLabel" destination="BBC-hm-SAz" id="T5c-5H-V1O"/>
                         <outlet property="cityLabel" destination="lXL-b6-XKh" id="hgq-9h-eUD"/>
+                        <outlet property="hobbyLabel" destination="BBC-hm-SAz" id="T5c-5H-V1O"/>
                         <outlet property="nameLabel" destination="JdR-XG-yJB" id="Pcw-SJ-vEh"/>
                         <outlet property="personImage" destination="XcI-GZ-ROR" id="IGq-Ob-d08"/>
                     </connections>
@@ -306,26 +397,92 @@
                     <view key="view" contentMode="scaleToFill" id="15i-sy-rc7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hy4-U5-pGc">
+                                <rect key="frame" x="16" y="117.5" width="288" height="355.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Hj-XQ-oaI">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGC-QO-Caf">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Освободилась от никотиновой зависимости" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-zg-IKk">
+                                                <rect key="frame" x="0.0" y="41" width="250" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-bh-gx4">
+                                        <rect key="frame" x="0.0" y="107" width="223" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auQ-1k-uLV">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="После фильма &quot;Доминион&quot; перешла на веганство" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMV-6P-IlT">
+                                                <rect key="frame" x="0.0" y="41" width="223" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fsb-yo-cS3">
+                                        <rect key="frame" x="0.0" y="214" width="191.5" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fH-8I-Ax3">
+                                                <rect key="frame" x="0.0" y="0.0" width="191.5" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Получила инициацию в Духовной практике" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTY-L5-x18">
+                                                <rect key="frame" x="0.0" y="41" width="191.5" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9J-xs-4Fy">
+                                        <rect key="frame" x="0.0" y="321" width="288" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Подробнее о Духовной практике" buttonSize="medium"/>
+                                        <connections>
+                                            <segue destination="9n2-Ka-1d5" kind="show" id="ZXG-7B-94t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KEP-ob-xVE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hy4-U5-pGc" firstAttribute="leading" secondItem="15i-sy-rc7" secondAttribute="leading" constant="16" id="4nq-K0-tJn"/>
+                            <constraint firstAttribute="trailing" secondItem="hy4-U5-pGc" secondAttribute="trailing" constant="16" id="CII-O0-VSD"/>
+                            <constraint firstItem="hy4-U5-pGc" firstAttribute="top" secondItem="KEP-ob-xVE" secondAttribute="top" constant="25" id="uNq-q2-Yox"/>
+                            <constraint firstItem="hy4-U5-pGc" firstAttribute="centerX" secondItem="15i-sy-rc7" secondAttribute="centerX" id="vgR-fz-6WS"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Важное обо мне" id="2kX-a8-o9Z">
-                        <barButtonItem key="rightBarButtonItem" title="Else" id="viG-tb-JJA">
-                            <connections>
-                                <segue destination="9n2-Ka-1d5" kind="show" id="E3i-Oe-pYG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Важное обо мне" id="2kX-a8-o9Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3u-M7-muA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901" y="753"/>
+            <point key="canvasLocation" x="2900.625" y="752.11267605633805"/>
         </scene>
-        <!--Social Person-->
+        <!--Person-->
         <scene sceneID="jFW-dD-vs9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x6y-0z-avb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social Person" image="person.fill" catalog="system" id="H8e-HA-jAx"/>
+                    <tabBarItem key="tabBarItem" title="Person" image="person.fill" catalog="system" id="H8e-HA-jAx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="EOV-gB-qTd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
@@ -347,6 +504,7 @@
     <resources>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="spiritualImage" width="350" height="376"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
