@@ -7,23 +7,13 @@
 
 import UIKit
 
-class SpiritualPersonViewController: UIViewController {
-    private let person = Person.getSpiritualPerson()
-
+final class ElseViewController: UIViewController {
     @IBOutlet var spiritualNameLabel: UILabel!
     @IBOutlet var spiritualAgeLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
-    @IBOutlet var hobbyLabel: UILabel!
     @IBOutlet var teacherLabel: UILabel!
     
-    @IBOutlet var personImage: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getSpiritualPerson()
-        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
-        navigationItem.title = person.fullName
-    }
+    private let person = Person.getSpiritualPerson()
     
     private let firstColor = UIColor(
         red: (203/255.0),
@@ -39,12 +29,18 @@ class SpiritualPersonViewController: UIViewController {
         alpha: 1
     )
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getSpiritualPerson()
+        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
+        navigationItem.title = person.name
+    }
+    
     // MARK: Private methods
     private func getSpiritualPerson() {
         spiritualNameLabel.text = person.name
         spiritualAgeLabel.text = person.age
         cityLabel.text = person.city
-        hobbyLabel.text = person.hobby
         teacherLabel.text = person.teacher
     }
     

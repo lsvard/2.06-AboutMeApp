@@ -1,17 +1,24 @@
 //
-//  greetingViewController.swift
+//  MoreViewController.swift
 //  AboutMeApp
 //
-//  Created by l.s.vard on 13.08.2023.
+//  Created by lsvard on 26.08.2023.
 //
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
-    @IBOutlet var welcomeLabel: UILabel!
-    @IBOutlet var helloLabel: UILabel!
+final class MoreViewController: UIViewController {
+    @IBOutlet var infoLabel: UILabel!
     
-    var person = Person.getPerson()
+    private let info = Person.getMoreInfo()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
+        navigationItem.title = info.fullName
+        infoLabel.text = info.more
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: info.fullName)
+    }
     
     private let firstColor = UIColor(
         red: (203/255.0),
@@ -27,13 +34,7 @@ final class WelcomeViewController: UIViewController {
         alpha: 1
     )
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
-        welcomeLabel.text = "Welcome, \(person.fullName)!"
-    }
-    
-    // MARK: - Private Methods
+    // MARK: Private methods
     private func setGradienViewColor(topColor: UIColor, bottomColor: UIColor) {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
@@ -41,4 +42,3 @@ final class WelcomeViewController: UIViewController {
         view.layer.insertSublayer(layer, at: 0)
     }
 }
-

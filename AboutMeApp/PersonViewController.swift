@@ -7,10 +7,7 @@
 
 import UIKit
 
-class PersonViewController: UIViewController {
-    
-    private let person = Person.getPerson()
-
+final class PersonViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
@@ -18,12 +15,7 @@ class PersonViewController: UIViewController {
     
     @IBOutlet var personImage: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getPerson()
-        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
-        navigationItem.title = person.fullName
-    }
+    private let person = Person.getPerson()
     
     private let firstColor = UIColor(
         red: (203/255.0),
@@ -38,6 +30,18 @@ class PersonViewController: UIViewController {
         blue:(233/255.0),
         alpha: 1
     )
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
+        getPerson()
+        navigationItem.title = person.fullName
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: person.fullName)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        personImage.layer.cornerRadius = personImage.frame.width / 2
+    }
     
     // MARK: Private methods
     private func getPerson() {

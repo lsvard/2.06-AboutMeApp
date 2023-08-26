@@ -24,7 +24,6 @@ final class LogInViewController: UIViewController {
     }
     
     // MARK: - IBActions/
-    
     @IBAction func logInButtonPressed() {
         guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
@@ -53,12 +52,12 @@ extension LogInViewController {
     private func showAlert(
         title: String,
         message: String
-    ) {
-        let alert = UIAlertController(
+    ) { let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
+        
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.passwordTF.text = ""
         }
