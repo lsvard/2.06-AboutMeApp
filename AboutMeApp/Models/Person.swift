@@ -6,17 +6,22 @@
 //
 
 struct Person {
+    let fullName: String
+    let photo: String
     let name: String
     let age: String
     let city: String
-    let ambition: String
+    let hobby: String
     
     static func getPerson() -> Person {
         Person(
-            name: "Lada (not a car﹗)",
-            age: "28 in my soul 😌",
-            city: "Zvenigirod, but moving soon 🧳 to my own flat 🏡",
-            ambition: "Middle IOS-developer in 2024 😎")
+            fullName: "Lada Vardanian", 
+            photo: "lsvard",
+            name: "Лада (не авто 🥲)",
+            age: "В душе мне 28 😌",
+            city: "Пока еще Звенигород 🏡",
+            hobby: "Плавание 🏊🏻‍♀️"
+        )
     }
 }
 

@@ -30,7 +30,7 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
-        welcomeLabel.text = "Welcome, \(person.name)!"
+        welcomeLabel.text = "Welcome, \(person.fullName)!"
     }
     
     
