@@ -30,7 +30,7 @@ struct Person {
     
     static func getSpiritualPerson() -> Person {
         Person(
-            fullName: "Lada Vardanian",
+            fullName: "",
             photo: "",
             name: "La'van'ya",
             age: "3 года",

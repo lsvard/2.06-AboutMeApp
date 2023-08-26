@@ -36,7 +36,6 @@ final class PersonViewController: UIViewController {
         setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
         getPerson()
         navigationItem.title = person.fullName
-        //navigationItem.backBarButtonItem = UIBarButtonItem(title: person.fullName)
     }
     
     override func viewWillLayoutSubviews() {
