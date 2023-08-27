@@ -413,7 +413,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="infoTextView" destination="EGB-1s-4BO" id="BuI-al-1AQ"/>
+                        <outlet property="moreTextView" destination="EGB-1s-4BO" id="BuI-al-1AQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3u-M7-muA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

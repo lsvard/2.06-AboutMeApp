@@ -24,12 +24,7 @@ final class PersonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradient()
-        getPerson()
         navigationItem.title = user.person.fullName
-    }
-    
-    // MARK: Private methods
-    private func getPerson() {
         nameLabel.text = user.person.name
         ageLabel.text = user.person.age
         cityLabel.text = user.person.city

@@ -8,7 +8,7 @@
 import UIKit
 
 final class MoreViewController: UIViewController {
-    @IBOutlet var infoTextView: UITextView!
+    @IBOutlet var moreTextView: UITextView!
     
 //    var user = Person.getPerson()
 //
@@ -16,10 +16,9 @@ final class MoreViewController: UIViewController {
 //        super.viewDidLoad()
 //        view.addVerticalGradient()
 //        navigationItem.title = user.fullName
-//        infoTextView.text = user.more
-//        infoTextView.backgroundColor = .clear
-//        infoTextView.textColor = .white
-//
+//        moreTextView.text = user.more
+//        moreTextView.backgroundColor = .clear
+//        moreTextView.textColor = .white
 //        navigationItem.backBarButtonItem = UIBarButtonItem(title: user.fullName)
 //    }
     var user: User!
@@ -27,10 +26,9 @@ final class MoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradient()
-        title = "\(user.person.fullName) Bio"
-        infoTextView.backgroundColor = .clear
-        infoTextView.textColor = .white
-        infoTextView.text = user.person.more
+        navigationItem.title = user.person.fullName
+        moreTextView.backgroundColor = .clear
+        moreTextView.textColor = .white
+        moreTextView.text = user.person.more
     }
-    
 }
