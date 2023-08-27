@@ -280,7 +280,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-GZ-ROR">
                                 <rect key="frame" x="102" y="96" width="171" height="171"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="XcI-GZ-ROR" secondAttribute="height" multiplier="1:1" id="Sdr-Cj-vcE"/>
+                                    <constraint firstAttribute="height" constant="171" id="E1v-WY-rsW"/>
+                                    <constraint firstAttribute="width" constant="171" id="FNd-cH-1Eb"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-rA-X6f">

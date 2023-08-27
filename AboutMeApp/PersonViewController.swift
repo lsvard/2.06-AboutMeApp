@@ -13,7 +13,11 @@ final class PersonViewController: UIViewController {
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var hobbyLabel: UILabel!
     
-    @IBOutlet var personImage: UIImageView!
+    @IBOutlet var personImage: UIImageView! {
+        didSet {
+            personImage.layer.cornerRadius = personImage.frame.width / 2
+        }
+    }
     
     private let person = Person.getPerson()
     
@@ -22,11 +26,6 @@ final class PersonViewController: UIViewController {
         view.addVerticalGradient()
         getPerson()
         navigationItem.title = person.fullName
-    }
-    
-    override func viewWillLayoutSubviews() {
-        personImage.layer.cornerRadius = 10
-        //personImage.layer.cornerRadius = personImage.frame.width / 2 
     }
     
     // MARK: Private methods
