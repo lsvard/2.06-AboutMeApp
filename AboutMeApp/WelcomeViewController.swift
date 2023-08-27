@@ -9,7 +9,6 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
-    @IBOutlet var helloLabel: UILabel!
     
     var person = Person.getPerson()
   
