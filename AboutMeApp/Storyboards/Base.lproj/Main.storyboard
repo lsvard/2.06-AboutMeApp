@@ -386,19 +386,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-zg-IKk">
-                                <rect key="frame" x="16" y="170" width="382" height="20.333333333333343"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EGB-1s-4BO">
+                                <rect key="frame" x="20" y="140" width="374" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KEP-ob-xVE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aKv-zg-IKk" firstAttribute="centerX" secondItem="15i-sy-rc7" secondAttribute="centerX" id="2OH-Rf-etb"/>
-                            <constraint firstItem="aKv-zg-IKk" firstAttribute="leading" secondItem="KEP-ob-xVE" secondAttribute="leading" constant="16" id="LfL-My-3eu"/>
-                            <constraint firstItem="aKv-zg-IKk" firstAttribute="top" secondItem="KEP-ob-xVE" secondAttribute="top" constant="30" id="x1f-wt-yVt"/>
+                            <constraint firstItem="EGB-1s-4BO" firstAttribute="bottom" secondItem="KEP-ob-xVE" secondAttribute="bottom" id="hoU-Mn-DeU"/>
+                            <constraint firstItem="KEP-ob-xVE" firstAttribute="trailing" secondItem="EGB-1s-4BO" secondAttribute="trailing" constant="20" id="kNz-Uw-4pb"/>
+                            <constraint firstItem="EGB-1s-4BO" firstAttribute="top" secondItem="KEP-ob-xVE" secondAttribute="top" id="ryN-hy-KrL"/>
+                            <constraint firstItem="EGB-1s-4BO" firstAttribute="leading" secondItem="KEP-ob-xVE" secondAttribute="leading" constant="20" id="xKs-Nh-hgz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Person" id="2kX-a8-o9Z">
@@ -410,12 +413,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="infoLabel" destination="aKv-zg-IKk" id="IiW-5M-SHi"/>
+                        <outlet property="infoTextView" destination="EGB-1s-4BO" id="BuI-al-1AQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3u-M7-muA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900.625" y="752.11267605633805"/>
+            <point key="canvasLocation" x="2898.5507246376815" y="752.00892857142856"/>
         </scene>
         <!--Person-->
         <scene sceneID="jFW-dD-vs9">
@@ -449,6 +452,9 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="spiritualImage" width="350" height="376"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
