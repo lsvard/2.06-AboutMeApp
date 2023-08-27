@@ -15,24 +15,10 @@ final class ElseViewController: UIViewController {
     
     private let person = Person.getSpiritualPerson()
     
-    private let firstColor = UIColor(
-        red: (203/255.0),
-        green: (128/255.0),
-        blue:(153/255.0),
-        alpha: 1
-    )
-    
-    private let secondColor = UIColor(
-        red: (122/255.0),
-        green: (160/255.0),
-        blue:(233/255.0),
-        alpha: 1
-    )
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradient()
         getSpiritualPerson()
-        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
         navigationItem.title = person.name
     }
     
@@ -42,12 +28,5 @@ final class ElseViewController: UIViewController {
         spiritualAgeLabel.text = person.age
         cityLabel.text = person.city
         teacherLabel.text = person.teacher
-    }
-    
-    private func setGradienViewColor(topColor: UIColor, bottomColor: UIColor) {
-        let layer = CAGradientLayer()
-        layer.frame = view.bounds
-        layer.colors = [topColor.cgColor, bottomColor.cgColor]
-        view.layer.insertSublayer(layer, at: 0)
     }
 }

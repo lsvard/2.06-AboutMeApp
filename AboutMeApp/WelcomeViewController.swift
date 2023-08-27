@@ -12,24 +12,10 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var helloLabel: UILabel!
     
     var person = Person.getPerson()
-    
-    private let firstColor = UIColor(
-        red: (203/255.0),
-        green: (128/255.0),
-        blue:(153/255.0),
-        alpha: 1
-    )
-    
-    private let secondColor = UIColor(
-        red: (122/255.0),
-        green: (160/255.0),
-        blue:(233/255.0),
-        alpha: 1
-    )
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradienViewColor(topColor: firstColor, bottomColor: secondColor)
+        view.addVerticalGradient()
         welcomeLabel.text = "Welcome, \(person.fullName)!"
     }
     
