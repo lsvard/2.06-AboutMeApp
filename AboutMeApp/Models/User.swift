@@ -20,24 +20,26 @@ struct User {
 }
 
 struct Person {
-    let fullName: String
     let photo: String
     let name: String
+    let surname: String
     let age: String
     let city: String
     let hobby: String
-    let teacher: String
     let more: String
+    
+    var  fullName: String {
+        "\(name) \(surname)"
+    }
     
     static func getPerson() -> Person {
         Person(
-            fullName: "Lada Vardanian",
             photo: "lsvard",
-            name: "Лада (не авто 🥲)",
+            name: "Lada",
+            surname: "Vardanian",
             age: "В душе мне 28 😌",
             city: "Пока еще Звенигород 🏡",
             hobby: "Плавание 🏊🏻‍♀️",
-            teacher: "",
             more: """
                 В 2019 освободилась от никотиновой зависимости.\n
                 С 2020 придерживаюсь веганского типа питания.\n
