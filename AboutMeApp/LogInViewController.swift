@@ -13,6 +13,12 @@ final class LogInViewController: UIViewController {
     
     private let user = User.getUser()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = user.login
+        passwordTF.text = user.password
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else {
             return

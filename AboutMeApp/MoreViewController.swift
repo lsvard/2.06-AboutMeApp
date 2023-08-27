@@ -10,8 +10,8 @@ import UIKit
 final class MoreViewController: UIViewController {
     @IBOutlet var infoTextView: UITextView!
     
-    private let user = Person.getMoreInfo()
-    
+    var user = Person.getPerson()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradient()
@@ -19,6 +19,18 @@ final class MoreViewController: UIViewController {
         infoTextView.text = user.more
         infoTextView.backgroundColor = .clear
         infoTextView.textColor = .white
+
         navigationItem.backBarButtonItem = UIBarButtonItem(title: user.fullName)
     }
+//    var user: User!
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        view.addVerticalGradient()
+//        title = "\(user.person.fullName) Bio"
+//        infoTextView.backgroundColor = .clear
+//        infoTextView.textColor = .white
+//        infoTextView.text = user.person.more
+//    }
+    
 }
