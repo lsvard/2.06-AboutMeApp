@@ -10,20 +10,12 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     
-    var person = Person.getPerson()
+    var user: User!
   
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradient()
-        welcomeLabel.text = "Welcome, \(person.fullName)!"
-    }
-    
-    // MARK: - Private Methods
-    private func setGradienViewColor(topColor: UIColor, bottomColor: UIColor) {
-        let layer = CAGradientLayer()
-        layer.frame = view.bounds
-        layer.colors = [topColor.cgColor, bottomColor.cgColor]
-        view.layer.insertSublayer(layer, at: 0)
+        welcomeLabel.text = "Welcome, \(user.person.fullName)!"
     }
 }
 

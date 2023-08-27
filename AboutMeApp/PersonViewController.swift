@@ -19,21 +19,21 @@ final class PersonViewController: UIViewController {
         }
     }
     
-    private let person = Person.getPerson()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradient()
         getPerson()
-        navigationItem.title = person.fullName
+        navigationItem.title = user.person.fullName
     }
     
     // MARK: Private methods
     private func getPerson() {
-        nameLabel.text = person.name
-        ageLabel.text = person.age
-        cityLabel.text = person.city
-        hobbyLabel.text = person.hobby
-        personImage.image = UIImage(named: person.photo)
+        nameLabel.text = user.person.name
+        ageLabel.text = user.person.age
+        cityLabel.text = user.person.city
+        hobbyLabel.text = user.person.hobby
+        personImage.image = UIImage(named: user.person.photo)
     }
 }

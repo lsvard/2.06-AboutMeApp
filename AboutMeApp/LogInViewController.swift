@@ -14,10 +14,23 @@ final class LogInViewController: UIViewController {
     private let user = User.getUser()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.person = user.person
+        guard let tabBarController = segue.destination as? UITabBarController else {
+            return
+        }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController
+                guard let userInfoVC = userInfoVC as? PersonViewController else {
+                    return
+                }
+                userInfoVC.user = user
+            }
+        }
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -53,10 +66,10 @@ extension LogInViewController {
         title: String,
         message: String
     ) { let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
+        title: title,
+        message: message,
+        preferredStyle: .alert
+    )
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.passwordTF.text = ""
